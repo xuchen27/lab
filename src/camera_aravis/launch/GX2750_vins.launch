@@ -1,0 +1,27 @@
+<launch>
+
+<node pkg="camera_aravis" type="camnode" name="camera_gx2750" output="screen">
+  <param name="Acquire" type="bool" value="True" />
+  <param name="ExposureAuto" type="str" value="Off" />
+  <param name="GainAuto" type="str" value="Off" />
+  <param name="ExposureTimeAbs" type="double" value="40000.0" />
+  <param name="Gain" type="double" value="15.0" />
+  <param name="AcquisitionMode" type="str" value="Continuous" />
+  <param name="TriggerSelector" type="str" value="FrameStart" />
+  <param name="TriggerMode" type="str" value="On" />
+  <param name="TriggerActivation" type="str" value="FallingEdge" />
+  <param name="TriggerSource" type="str" value="Line1" />
+  <param name="SyncOutSelector" type="str" value="SyncOut1" />
+  <!--param name="SyncOutSource" type="str" value="FrameReadout" /-->
+  <param name="SyncOutSource" type="str" value="FrameTriggerReady" />
+  <param name="GevSCPSPacketSize" type="int" value="1500" />
+  <param name="OffsetX" type="int" value="1032" />
+  <param name="OffsetY" type="int" value="825" />
+  <param name="Width"   type="int" value="688" />
+  <param name="Height"  type="int" value="550" />
+
+  <param name="frame_id" type="str" value="camera_gx2750" />
+  <param name="mtu" type="int" value="1500" />
+</node>
+
+</launch>
